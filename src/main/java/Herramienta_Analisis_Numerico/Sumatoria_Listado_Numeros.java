@@ -1,7 +1,5 @@
 package Herramienta_Analisis_Numerico;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Sumatoria_Listado_Numeros {
 
