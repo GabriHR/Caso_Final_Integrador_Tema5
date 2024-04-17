@@ -36,3 +36,15 @@ Ambos métodos proporcionan el mismo resultado, pero el enfoque iterativo suele 
 2. sortLines(String inputFilePath, String outputFilePath): Lee todas las líneas de un archivo de entrada en una lista, luego para cada línea, ordena las palabras alfabéticamente utilizando sortWordsInLine y 3. agrega la línea ordenada a una nueva lista. Finalmente, escribe las líneas ordenadas en un archivo de salida.
 3. sortWordsInLine(String line): Divide una cadena de texto en palabras, las ordena alfabéticamente y las une nuevamente en una sola cadena, separadas por espacios.
 En resumen, la clase proporciona una funcionalidad para leer un archivo de texto, ordenar las palabras en cada línea y escribir las líneas ordenadas en un nuevo archivo.
+
+  - La clase BUSQUEDA_EFICIENTE_TEXTOS proporciona métodos para realizar operaciones de búsqueda y ordenamiento en archivos de texto:
+1. busquedaLineal(String rutaArchivo, String palabra): Realiza una búsqueda lineal de una palabra en un archivo de texto, leyendo el archivo línea por línea y verificando si cada línea contiene la palabra. Retorna true si la palabra se encuentra y false si no.
+2. busquedaBinaria(String rutaArchivo, String palabra): Realiza una búsqueda binaria de una palabra en un archivo de texto. Lee todas las líneas del archivo en una lista, las ordena usando el algoritmo de 3. ordenamiento por mezcla (mergeSort) y luego realiza una búsqueda binaria en la lista ordenada. Retorna true si la palabra se encuentra y false si no.
+3. leerLineas(String rutaArchivo): Método privado que lee todas las líneas de un archivo de texto en una lista y devuelve la lista de líneas.
+4. mergeSort(List<String> lineas): Método privado que ordena una lista de líneas de texto utilizando el algoritmo de ordenamiento por mezcla. Divide la lista en dos mitades, ordena cada mitad recursivamente y luego combina las dos mitades ordenadas en una sola lista ordenada.
+5. merge(List<String> left, List<String> right): Método privado que combina dos listas ordenadas en una sola lista ordenada. Itera sobre ambas listas al mismo tiempo y agrega el elemento más pequeño en cada paso, luego agrega los elementos restantes de una lista cuando la otra se agota.
+En resumen, la clase proporciona funcionalidades para buscar eficientemente palabras en un archivo de texto, ya sea mediante búsqueda lineal o búsqueda binaria, y también para ordenar las líneas del archivo utilizando el algoritmo de ordenamiento por mezcla.
+
+
+
+
