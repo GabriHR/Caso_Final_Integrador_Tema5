@@ -194,6 +194,53 @@ public class Main {
                             }
                         }
                         break;
+
+                    case "Busqueda de palabras":
+                        boolean seguirBuscando = true;
+                        do {
+                            JFileChooser fileChooserBuscarPalabras = new JFileChooser();
+                            fileChooserBuscarPalabras.setFileFilter(new javax.swing.filechooser.FileFilter() {
+                                public boolean accept(File f) {
+                                    return f.getName().toLowerCase().endsWith(".txt") || f.isDirectory();
+                                }
+
+                                public String getDescription() {
+                                    return "Archivos de texto";
+                                }
+                            });
+                            int returnValueBuscarPalabras = fileChooserBuscarPalabras.showOpenDialog(null);
+                            if (returnValueBuscarPalabras == JFileChooser.APPROVE_OPTION) {
+                                File selectedFile = fileChooserBuscarPalabras.getSelectedFile();
+                                String palabra = JOptionPane.showInputDialog("Ingrese la palabra que está buscando:");
+                                try {
+                                    BufferedReader reader = new BufferedReader(new FileReader(selectedFile));
+                                    String linea;
+                                    int numLinea = 0;
+                                    boolean palabraEncontrada = false;
+                                    while ((linea = reader.readLine()) != null) {
+                                        numLinea++;
+                                        int index = linea.indexOf(palabra);
+                                        if (index != -1) {
+                                            palabraEncontrada = true;
+                                            JOptionPane.showMessageDialog(null, "La palabra '" + palabra + "' se encontró en la línea " + numLinea + ", posición " + (index + 1));
+                                            break;
+                                        }
+                                    }
+                                    reader.close();
+                                    if (!palabraEncontrada) {
+                                        throw new Exception("La palabra que está buscando, no se encuentra en este archivo");
+                                    }
+                                } catch (Exception ex) {
+                                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                                }
+                            }
+                            int opcion = JOptionPane.showConfirmDialog(null, "¿Desea seguir buscando palabras?", "Confirmación", JOptionPane.YES_NO_OPTION);
+                            if (opcion == JOptionPane.NO_OPTION) {
+                                seguirBuscando = false;
+                            }
+                        } while (seguirBuscando);
+                        break;
+
                 }
             }
         });
