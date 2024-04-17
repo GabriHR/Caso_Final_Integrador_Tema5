@@ -154,6 +154,15 @@ public class Main {
                         System.out.println("Fecha agregada: " + randomDate);
                         break;
 
+                    case "Listar fechas":
+                        List<LocalDate> fechas = gestionFechas.listarFechas();
+                        StringBuilder fechasStr = new StringBuilder("Listado de fechas agregadas:\n");
+                        for (LocalDate fecha : fechas) {
+                            fechasStr.append(fecha).append("\n");
+                        }
+                        JOptionPane.showMessageDialog(null, fechasStr.toString());
+                        break;
+
                 }
             }
         });
