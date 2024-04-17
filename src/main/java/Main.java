@@ -2,14 +2,24 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import AnalisisGenomico.Conteo_Genes;
 import AnalisisGenomico.Combinaciones_Geneticas;
 import Gestion_Informacion_Cientifica.Gestion_Fechas;
+import Gestion_Informacion_Cientifica.Organizacion_Documentos;
 import Optimizacion_Procesos.Mejora_Algoritmos;
-
+import Herramienta_Analisis_Numerico.Calculo_Potencias_Maximos;
+import Herramienta_Analisis_Numerico.Sumatoria_Listado_Numeros;
 
 public class Main {
 
@@ -85,10 +95,25 @@ public class Main {
                         }
                         break;
 
+                    case "Combinaciones genéticas recursivas":
+                        String nString = JOptionPane.showInputDialog("Ingrese el valor de n:");
+                        String kString = JOptionPane.showInputDialog("Ingrese el valor de k:");
+                        int n = Integer.parseInt(nString);
+                        int k = Integer.parseInt(kString);
+                        long combinacionesRecursivas = combinacionesGeneticas.calcularCombinacionesRecursivo(n, k);
+                        JOptionPane.showMessageDialog(null, "Las combinaciones genéticas recursivas son: " + combinacionesRecursivas);
+                        break;
 
+                    case "Combinaciones genéticas iterativas":
+                        String nStringIterativo = JOptionPane.showInputDialog("Ingrese el valor de n:");
+                        String kStringIterativo = JOptionPane.showInputDialog("Ingrese el valor de k:");
+                        int nIterativo = Integer.parseInt(nStringIterativo);
+                        int kIterativo = Integer.parseInt(kStringIterativo);
+                        long combinacionesIterativas = combinacionesGeneticas.calcularCombinacionesIterativo(nIterativo, kIterativo);
+                        JOptionPane.showMessageDialog(null, "Las combinaciones genéticas iterativas son: " + combinacionesIterativas);
+                        break;
                 }
             }
         });
-
     }
 }
