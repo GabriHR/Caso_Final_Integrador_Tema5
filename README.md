@@ -17,7 +17,7 @@ calcularCombinacionesRecursivo utiliza un enfoque recursivo para calcular el coe
 calcularCombinacionesIterativo utiliza un enfoque iterativo que llena una matriz C de tamaño (n+1) x (k+1) y calcula los valores basándose en la misma identidad matemática. Retorna C[n][k].
 Ambos métodos proporcionan el mismo resultado, pero el enfoque iterativo suele ser más eficiente ya que evita la sobrecarga de las llamadas recursivas.
 
-EN el package de Herramientas de Análisis Numérico aparecen las clases Sumatoria_Listado_Numeros y Calculo_Potencias_maximos.
+En el package de Herramientas de Análisis Numérico aparecen las clases Sumatoria_Listado_Numeros y Calculo_Potencias_maximos.
   - La clase SUMATORIA_LISTADO_NUMEROS tiene varios métodos para operar en listas de números enteros:
 1. calcularSumatoria(int n): Calcula la suma de todos los números desde n hasta 1 de manera recursiva. Retorna 0 si n es menor o igual a 0, de lo contrario, retorna n más la suma de los números desde n-1.
 2. listarNumeros(int inicio, int fin): Genera una lista de números enteros desde inicio hasta fin de manera recursiva. Retorna una lista vacía si inicio es mayor que fin, de lo contrario, retorna una llamada recursiva con fin decrementado y agrega fin a la lista resultante.
