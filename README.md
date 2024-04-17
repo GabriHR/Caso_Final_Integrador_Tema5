@@ -62,7 +62,7 @@ En el package Optimizacion_Procesos aparece la clase Mejora_Algoritmos (que cons
 5. swap(int[] arr, int i, int j): Intercambia dos elementos en el array dado dos índices.
 En resumen, la clase proporciona una implementación del algoritmo QuickSort junto con mejoras como la elección de la mediana de tres elementos como pivote y la impresión del array con un retraso.
 
-Todas las clases explicadas anteriormente son utilizadas para la definición de código necesaria para cumplir con lo requerido. Esta implementación de código es compilada y mostrada al usuario por una clase 'Main' que muestra la ejecución de dicho código.
+Todas las clases explicadas anteriormente son utilizadas para la definición de código necesaria para cumplir con lo requerido. Esta implementación de código es compilada y mostrada al usuario por una clase 'Main' que muestra la ejecución de dicho código. Esta clase no esta definida en ningún package porque no es necesario. Sin embargo con los diversos imports añadidos, utiliza el código de las demás clases de los diferentes package para su ejecución.
 
 - La clase Main en el archivo es una aplicación de escritorio en Java que utiliza Swing para la interfaz de usuario. 
 1. En el método main, se crea un nuevo JFrame que actúa como la ventana principal de la aplicación. Se establece el tamaño de la ventana y se agrega un JPanel a la ventana.  
