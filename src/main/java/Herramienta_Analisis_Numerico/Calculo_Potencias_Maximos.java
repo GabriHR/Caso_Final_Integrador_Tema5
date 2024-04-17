@@ -1,5 +1,6 @@
 package Herramienta_Analisis_Numerico;
 
+import java.util.List;
 
 public class Calculo_Potencias_Maximos {
 
@@ -12,5 +13,13 @@ public class Calculo_Potencias_Maximos {
         return resultado;
     }
 
-
+    public int encontrarMaximo(List<Integer> numeros) {
+        int maximo = numeros.get(0);
+        for (int numero : numeros) {
+            if (numero > maximo) {
+                maximo = numero;
+            }
+        }
+        return maximo;
+    }
 }
