@@ -2,24 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 import AnalisisGenomico.Conteo_Genes;
 import AnalisisGenomico.Combinaciones_Geneticas;
 import Gestion_Informacion_Cientifica.Gestion_Fechas;
-import Gestion_Informacion_Cientifica.Organizacion_Documentos;
 import Optimizacion_Procesos.Mejora_Algoritmos;
 import Herramienta_Analisis_Numerico.Calculo_Potencias_Maximos;
-import Herramienta_Analisis_Numerico.Sumatoria_Listado_Numeros;
 
 public class Main {
 
@@ -112,8 +102,31 @@ public class Main {
                         long combinacionesIterativas = combinacionesGeneticas.calcularCombinacionesIterativo(nIterativo, kIterativo);
                         JOptionPane.showMessageDialog(null, "Las combinaciones genéticas iterativas son: " + combinacionesIterativas);
                         break;
+
+                    case "Calcular potencias y encontrar máximo":
+                        String base1String = JOptionPane.showInputDialog("Ingrese la primera base:");
+                        String exponente1String = JOptionPane.showInputDialog("Ingrese el primer exponente:");
+                        String base2String = JOptionPane.showInputDialog("Ingrese la segunda base:");
+                        String exponente2String = JOptionPane.showInputDialog("Ingrese el segundo exponente:");
+                        String base3String = JOptionPane.showInputDialog("Ingrese la tercera base:");
+                        String exponente3String = JOptionPane.showInputDialog("Ingrese el tercer exponente:");
+                        int base1 = Integer.parseInt(base1String);
+                        int exponente1 = Integer.parseInt(exponente1String);
+                        int base2 = Integer.parseInt(base2String);
+                        int exponente2 = Integer.parseInt(exponente2String);
+                        int base3 = Integer.parseInt(base3String);
+                        int exponente3 = Integer.parseInt(exponente3String);
+                        Calculo_Potencias_Maximos calculoPotenciasMaximos = new Calculo_Potencias_Maximos();
+                        int resultado1 = calculoPotenciasMaximos.calcularPotencia(base1, exponente1);
+                        int resultado2 = calculoPotenciasMaximos.calcularPotencia(base2, exponente2);
+                        int resultado3 = calculoPotenciasMaximos.calcularPotencia(base3, exponente3);
+                        int maximo = calculoPotenciasMaximos.encontrarMaximo(Arrays.asList(resultado1, resultado2, resultado3));
+                        JOptionPane.showMessageDialog(null, "Los valores de las tres potencias son: " + resultado1 + ", " + resultado2 + ", " + resultado3 + "\nEl valor máximo entre las tres potencias es: " + maximo);
+                        break;
+
                 }
             }
         });
+
     }
 }
