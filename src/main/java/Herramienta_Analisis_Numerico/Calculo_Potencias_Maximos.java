@@ -1,6 +1,7 @@
 package Herramienta_Analisis_Numerico;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Calculo_Potencias_Maximos {
@@ -45,4 +46,13 @@ public class Calculo_Potencias_Maximos {
         return izquierda;
     }
 
+    public int calcularPotenciasYEncontrarMaximo(int base1, int exponente1, int base2, int exponente2, int base3, int exponente3) {
+        int resultado1 = calcularPotencia(base1, exponente1);
+        int resultado2 = calcularPotencia(base2, exponente2);
+        int resultado3 = calcularPotencia(base3, exponente3);
+
+        List<Integer> resultados = Arrays.asList(resultado1, resultado2, resultado3);
+
+        return encontrarMaximo(resultados);
+    }
 }
