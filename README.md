@@ -53,4 +53,11 @@ En resumen, la clase proporciona funcionalidades para buscar eficientemente pala
 4. merge(List<LocalDate> left, List<LocalDate> right): Método privado que combina dos listas ordenadas de fechas en una sola lista ordenada, iterando sobre ambas y agregando la fecha más temprana en cada paso.
 En resumen, la clase proporciona funcionalidades para gestionar una lista de fechas, agregar nuevas fechas a la lista y obtener la lista de fechas ordenada.
 
-
+En el package Optimizacion_Procesos aparece la clase Mejora_Algoritmos (que consta de una implementación de código del metodo 'quicksort').
+  - La clase MEJORA_ALGORITMOS implementa y mejora el algoritmo de ordenamiento QuickSort:
+1. quickSort(int[] arr, int low, int high, boolean ascendente): Implementa el algoritmo QuickSort. Realiza una partición del array utilizando el método partition y luego realiza llamadas recursivas para ordenar las dos mitades del array. Si es la primera vez que se ordena el array, imprime el array utilizando printArrayWithDelay.
+2. partition(int[] arr, int low, int high, boolean ascendente): Implementa la partición del algoritmo QuickSort. Selecciona un pivote utilizando medianOfThree, reordena el array para que los elementos menores (o mayores, según ascendente) estén a la izquierda del pivote y los mayores (o menores) a la derecha. Retorna el índice del pivote en el array reordenado.
+3. printArrayWithDelay(int[] arr): Imprime el array y hace que el hilo actual duerma durante 1500 milisegundos. Si el hilo se interrumpe durante el sueño, muestra un mensaje de error.
+4. medianOfThree(int[] arr, int low, int high): Implementa la elección del pivote como la mediana de tres elementos: el primero, el último y el del medio. Reordena estos elementos en el array para que el del medio (la mediana) sea el último, el menor sea el primero y el mayor sea el segundo. Retorna el índice del pivote (la mediana) en el array reordenado.
+5. swap(int[] arr, int i, int j): Intercambia dos elementos en el array dado dos índices.
+En resumen, la clase proporciona una implementación del algoritmo QuickSort junto con mejoras como la elección de la mediana de tres elementos como pivote y la impresión del array con un retraso.
