@@ -24,3 +24,10 @@ Ambos métodos proporcionan el mismo resultado, pero el enfoque iterativo suele 
 3. ordenarNumeros(int inicio, int fin): Genera una lista de números enteros desde inicio hasta fin y la ordena usando el algoritmo de ordenación rápida (QuickSort) con el método ordenarNumerosRecursivo.
 4. ordenarNumerosRecursivo(List<Integer> numeros, int inicio, int fin): Implementa el algoritmo de ordenación rápida recursivamente. Selecciona un pivote y hace llamadas recursivas para ordenar las sublistas alrededor del pivote.
 5. partition(List<Integer> numeros, int inicio, int fin): Implementa una parte del algoritmo de ordenación rápida. Selecciona un pivote y reordena la lista de tal manera que los elementos menores que el pivote estén a su izquierda y los mayores estén a su derecha. Devuelve el índice del pivote en la lista reordenada.
+
+  - La clase CALCULO_POTENCIAS_MAXIMOS tiene varios métodos para realizar operaciones matemáticas y de listas:
+1. calcularPotencia(int base, int exponente): Calcula la potencia de un número. Inicializa un resultado a 1 y multiplica la base por sí misma según el exponente en un bucle, decrementando el exponente en cada iteración. Retorna el resultado.
+2. encontrarMaximo(List<Integer> numeros): Encuentra el número máximo en una lista de números enteros. Inicializa el máximo al primer número de la lista y luego recorre la lista, actualizando el máximo si encuentra un número mayor. Retorna el máximo.
+3. ordenarNumeros(List<Integer> numeros): Ordena una lista de números enteros utilizando el algoritmo de ordenación rápida (QuickSort). Divide la lista en sublistas basadas en un pivote y ordena recursivamente estas sublistas antes de combinarlas. Retorna la lista ordenada.
+4. calcularPotenciasYEncontrarMaximo(int base1, int exponente1, int base2, int exponente2, int base3, int exponente3): Calcula las potencias de tres pares de base y exponente utilizando calcularPotencia, coloca los resultados en una lista y luego encuentra el máximo de estos resultados utilizando encontrarMaximo. Retorna el máximo encontrado.
+
