@@ -241,6 +241,19 @@ public class Main {
                         } while (seguirBuscando);
                         break;
 
+                    case "Algoritmo quicksort (ascendente)":
+                        int[] arrAsc = new Random().ints(10, 0, 100).toArray();
+                        System.out.println("\nArray original: " + Arrays.toString(arrAsc));
+                        mejoraAlgoritmos.quickSort(arrAsc, 0, arrAsc.length - 1, true);
+                        System.out.println("\nArray ordenado: " + Arrays.toString(arrAsc));
+                        break;
+
+                    case "Algoritmo quicksort (descendente)":
+                        int[] arrDesc = new Random().ints(10, 0, 100).toArray();
+                        System.out.println("\nArray original: " + Arrays.toString(arrDesc));
+                        mejoraAlgoritmos.quickSort(arrDesc, 0, arrDesc.length - 1, false);
+                        System.out.println("\nArray ordenado: " + Arrays.toString(arrDesc));
+                        break;
                 }
             }
         });
