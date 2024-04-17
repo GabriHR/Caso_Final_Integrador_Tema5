@@ -64,7 +64,7 @@ En resumen, la clase proporciona una implementación del algoritmo QuickSort jun
 
 Todas las clases explicadas anteriormente son utilizadas para la definición de código necesaria para cumplir con lo requerido. Esta implementación de código es compilada y mostrada al usuario por una clase 'Main' que muestra la ejecución de dicho código. Esta clase no esta definida en ningún package porque no es necesario. Sin embargo con los diversos imports añadidos, utiliza el código de las demás clases de los diferentes package para su ejecución.
 
-- La clase Main en el archivo es una aplicación de escritorio en Java que utiliza Swing para la interfaz de usuario. 
+- La clase MAIN en el archivo es una aplicación de escritorio en Java que utiliza Swing para la interfaz de usuario. 
 1. En el método main, se crea un nuevo JFrame que actúa como la ventana principal de la aplicación. Se establece el tamaño de la ventana y se agrega un JPanel a la ventana.  
 2. Se llama al método placeComponents que configura el panel principal. Este método crea varios componentes de la interfaz de usuario, incluyendo un JLabel para el título, un JComboBox para seleccionar opciones, y dos JButton para confirmar la selección y salir de la aplicación.  
 3. Se crean instancias de varias clases que se utilizarán para realizar diferentes operaciones basadas en la opción seleccionada en el JComboBox.  
