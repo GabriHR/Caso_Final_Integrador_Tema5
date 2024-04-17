@@ -148,6 +148,12 @@ public class Main {
                         JOptionPane.showMessageDialog(null, "Los números en el rango dado son: " + numeros);
                         break;
 
+                    case "Agregar fecha":
+                        LocalDate randomDate = LocalDate.ofEpochDay(new Random().nextInt(365 * 50));
+                        gestionFechas.agregarFecha(randomDate);
+                        System.out.println("Fecha agregada: " + randomDate);
+                        break;
+
                 }
             }
         });
