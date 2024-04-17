@@ -163,6 +163,37 @@ public class Main {
                         JOptionPane.showMessageDialog(null, fechasStr.toString());
                         break;
 
+                    case "Ordenar documento (A-Z)":
+                        JFileChooser fileChooser = new JFileChooser();
+                        fileChooser.setFileFilter(new javax.swing.filechooser.FileFilter() {
+                            public boolean accept(File f) {
+                                return f.getName().toLowerCase().endsWith(".txt") || f.isDirectory();
+                            }
+
+                            public String getDescription() {
+                                return "Archivos de texto";
+                            }
+                        });
+                        int returnValue = fileChooser.showOpenDialog(null);
+                        if (returnValue == JFileChooser.APPROVE_OPTION) {
+                            File selectedFile = fileChooser.getSelectedFile();
+                            try {
+                                List<String> linesBeforeSorting = Files.readAllLines(selectedFile.toPath());
+                                JOptionPane.showMessageDialog(null, "Contenido del archivo antes de ordenar:\n" + String.join("\n", linesBeforeSorting));
+
+                                List<String> sortedLines = new ArrayList<>();
+                                for (String line : linesBeforeSorting) {
+                                    sortedLines.add(Organizacion_Documentos.sortWordsInLine(line));
+                                }
+                                Files.write(selectedFile.toPath(), sortedLines);
+
+                                List<String> linesAfterSorting = Files.readAllLines(selectedFile.toPath());
+                                JOptionPane.showMessageDialog(null, "Contenido del archivo después de ordenar:\n" + String.join("\n", linesAfterSorting));
+                            } catch (IOException ex) {
+                                JOptionPane.showMessageDialog(null, "Error al ordenar el archivo: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                            }
+                        }
+                        break;
                 }
             }
         });
