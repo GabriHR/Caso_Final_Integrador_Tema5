@@ -61,3 +61,13 @@ En el package Optimizacion_Procesos aparece la clase Mejora_Algoritmos (que cons
 4. medianOfThree(int[] arr, int low, int high): Implementa la elección del pivote como la mediana de tres elementos: el primero, el último y el del medio. Reordena estos elementos en el array para que el del medio (la mediana) sea el último, el menor sea el primero y el mayor sea el segundo. Retorna el índice del pivote (la mediana) en el array reordenado.
 5. swap(int[] arr, int i, int j): Intercambia dos elementos en el array dado dos índices.
 En resumen, la clase proporciona una implementación del algoritmo QuickSort junto con mejoras como la elección de la mediana de tres elementos como pivote y la impresión del array con un retraso.
+
+Todas las clases explicadas anteriormente son utilizadas para la definición de código necesaria para cumplir con lo requerido. Esta implementación de código es compilada y mostrada al usuario por una clase 'Main' que muestra la ejecución de dicho código.
+
+- La clase Main en el archivo es una aplicación de escritorio en Java que utiliza Swing para la interfaz de usuario. 
+1. En el método main, se crea un nuevo JFrame que actúa como la ventana principal de la aplicación. Se establece el tamaño de la ventana y se agrega un JPanel a la ventana.  
+2. Se llama al método placeComponents que configura el panel principal. Este método crea varios componentes de la interfaz de usuario, incluyendo un JLabel para el título, un JComboBox para seleccionar opciones, y dos JButton para confirmar la selección y salir de la aplicación.  
+3. Se crean instancias de varias clases que se utilizarán para realizar diferentes operaciones basadas en la opción seleccionada en el JComboBox.  
+4. Se añaden ActionListener a los botones. El botón de confirmación tiene un ActionListener que realiza diferentes acciones basadas en la opción seleccionada en el JComboBox. Estas acciones incluyen contar genes, calcular combinaciones genéticas, calcular potencias y encontrar el máximo, calcular sumatorias, agregar y listar fechas, ordenar documentos, buscar palabras y ejecutar el algoritmo quicksort.  
+5. El botón de salida tiene un ActionListener que cierra la aplicación cuando se hace clic en él.  
+6. Finalmente, se hace visible la ventana principal de la aplicación en la que aparecen las diferentes opciones a elegir.
