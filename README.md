@@ -31,3 +31,8 @@ Ambos métodos proporcionan el mismo resultado, pero el enfoque iterativo suele 
 3. ordenarNumeros(List<Integer> numeros): Ordena una lista de números enteros utilizando el algoritmo de ordenación rápida (QuickSort). Divide la lista en sublistas basadas en un pivote y ordena recursivamente estas sublistas antes de combinarlas. Retorna la lista ordenada.
 4. calcularPotenciasYEncontrarMaximo(int base1, int exponente1, int base2, int exponente2, int base3, int exponente3): Calcula las potencias de tres pares de base y exponente utilizando calcularPotencia, coloca los resultados en una lista y luego encuentra el máximo de estos resultados utilizando encontrarMaximo. Retorna el máximo encontrado.
 
+  - La clase ORGANIZACION_DOCUMENTOS ofrece métodos para operaciones de lectura, escritura y ordenamiento en archivos y cadenas de texto:
+1. sortAndWriteLines(ArrayList<String> lines, String outputPath): Ordena una lista de cadenas de texto en orden alfabético utilizando Collections.sort y escribe las líneas ordenadas en un archivo de salida, una por una.
+2. sortLines(String inputFilePath, String outputFilePath): Lee todas las líneas de un archivo de entrada en una lista, luego para cada línea, ordena las palabras alfabéticamente utilizando sortWordsInLine y 3. agrega la línea ordenada a una nueva lista. Finalmente, escribe las líneas ordenadas en un archivo de salida.
+3. sortWordsInLine(String line): Divide una cadena de texto en palabras, las ordena alfabéticamente y las une nuevamente en una sola cadena, separadas por espacios.
+En resumen, la clase proporciona una funcionalidad para leer un archivo de texto, ordenar las palabras en cada línea y escribir las líneas ordenadas en un nuevo archivo.
