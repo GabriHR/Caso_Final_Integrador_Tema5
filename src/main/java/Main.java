@@ -1,5 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.List;
+
+import AnalisisGenomico.Conteo_Genes;
+import AnalisisGenomico.Combinaciones_Geneticas;
+import Gestion_Informacion_Cientifica.Gestion_Fechas;
+import Optimizacion_Procesos.Mejora_Algoritmos;
 
 
 public class Main {
@@ -56,6 +65,30 @@ public class Main {
         buttonPanel.add(exitButton);
         panel.add(buttonPanel);
 
+        Gestion_Fechas gestionFechas = new Gestion_Fechas();
+        Mejora_Algoritmos mejoraAlgoritmos = new Mejora_Algoritmos();
+        Conteo_Genes conteoGenes = new Conteo_Genes();
+        Combinaciones_Geneticas combinacionesGeneticas = new Combinaciones_Geneticas();
+
+        confirmButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selectedOption = (String) comboBox.getSelectedItem();
+                switch (selectedOption) {
+
+                    case "Conteo de genes":
+                        List<String> dnas = Arrays.asList("AGTCGAGTCTAGCTAGCTAGCATG", "AGTAGTAGT", "AGTCGAGT");
+                        for (int i = 0; i < dnas.size(); i++) {
+                            System.out.println("Cadena de ADN " + (i + 1) + ": " + dnas.get(i));
+                            int count = Conteo_Genes.countGenes(dnas.get(i), 0);
+                            System.out.println("Número de genes en la cadena de ADN " + (i + 1) + ": " + count);
+                        }
+                        break;
+
+
+                }
+            }
+        });
 
     }
 }
