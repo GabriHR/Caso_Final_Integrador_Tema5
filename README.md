@@ -46,6 +46,11 @@ En resumen, la clase proporciona una funcionalidad para leer un archivo de texto
 5. merge(List<String> left, List<String> right): Método privado que combina dos listas ordenadas en una sola lista ordenada. Itera sobre ambas listas al mismo tiempo y agrega el elemento más pequeño en cada paso, luego agrega los elementos restantes de una lista cuando la otra se agota.
 En resumen, la clase proporciona funcionalidades para buscar eficientemente palabras en un archivo de texto, ya sea mediante búsqueda lineal o búsqueda binaria, y también para ordenar las líneas del archivo utilizando el algoritmo de ordenamiento por mezcla.
 
-
+  - La clase GESTION_FECHAS ofrece métodos para operar en una lista de fechas (LocalDate):
+1. agregarFecha(LocalDate fecha): Agrega una fecha a la lista de fechas.
+2. listarFechas(): Ordena la lista de fechas utilizando el algoritmo de ordenamiento por mezcla (mergeSort) e retorna la lista ordenada.
+3. mergeSort(List<LocalDate> fechas): Método privado que ordena una lista de fechas utilizando el algoritmo de ordenamiento por mezcla. Divide la lista en dos mitades, ordena cada mitad recursivamente y luego combina las dos mitades ordenadas.
+4. merge(List<LocalDate> left, List<LocalDate> right): Método privado que combina dos listas ordenadas de fechas en una sola lista ordenada, iterando sobre ambas y agregando la fecha más temprana en cada paso.
+En resumen, la clase proporciona funcionalidades para gestionar una lista de fechas, agregar nuevas fechas a la lista y obtener la lista de fechas ordenada.
 
 
