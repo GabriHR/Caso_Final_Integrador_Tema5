@@ -2,14 +2,24 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import AnalisisGenomico.Conteo_Genes;
 import AnalisisGenomico.Combinaciones_Geneticas;
 import Gestion_Informacion_Cientifica.Gestion_Fechas;
+import Gestion_Informacion_Cientifica.Organizacion_Documentos;
 import Optimizacion_Procesos.Mejora_Algoritmos;
 import Herramienta_Analisis_Numerico.Calculo_Potencias_Maximos;
+import Herramienta_Analisis_Numerico.Sumatoria_Listado_Numeros;
 
 public class Main {
 
@@ -124,9 +134,22 @@ public class Main {
                         JOptionPane.showMessageDialog(null, "Los valores de las tres potencias son: " + resultado1 + ", " + resultado2 + ", " + resultado3 + "\nEl valor máximo entre las tres potencias es: " + maximo);
                         break;
 
+                    case "Calcular sumatoria":
+                        String nStringSumatoria = JOptionPane.showInputDialog("Ingrese el valor de n:");
+                        int nSumatoria = Integer.parseInt(nStringSumatoria);
+                        Sumatoria_Listado_Numeros sumatoriaListadoNumeros = new Sumatoria_Listado_Numeros();
+                        int resultadoSumatoria = sumatoriaListadoNumeros.calcularSumatoria(nSumatoria);
+                        JOptionPane.showMessageDialog(null, "El resultado de la sumatoria es: " + resultadoSumatoria);
+                        String inicioString = JOptionPane.showInputDialog("Ingrese el valor de inicio del rango:");
+                        String finString = JOptionPane.showInputDialog("Ingrese el valor de fin del rango:");
+                        int inicio = Integer.parseInt(inicioString);
+                        int fin = Integer.parseInt(finString);
+                        List<Integer> numeros = sumatoriaListadoNumeros.listarNumeros(inicio, fin);
+                        JOptionPane.showMessageDialog(null, "Los números en el rango dado son: " + numeros);
+                        break;
+
                 }
             }
         });
-
     }
 }
