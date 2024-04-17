@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bb5f96-647c-46b8-beec-bc1b9ce53e87" name="Changes" comment="9">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Herramienta_Analisis_Numerico/Sumatoria_Listado_Numeros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Herramienta_Analisis_Numerico/Sumatoria_Listado_Numeros.java" afterDir="false" />
+    <list default="true" id="67bb5f96-647c-46b8-beec-bc1b9ce53e87" name="Changes" comment="17">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Herramienta_Analisis_Numerico/Calculo_Potencias_Maximos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Herramienta_Analisis_Numerico/Calculo_Potencias_Maximos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +114,7 @@
       <workItem from="1713266916379" duration="211000" />
       <workItem from="1713289718036" duration="137000" />
       <workItem from="1713290909746" duration="108000" />
-      <workItem from="1713293397295" duration="3524000" />
+      <workItem from="1713293397295" duration="3822000" />
     </task>
     <task id="LOCAL-00001" summary="3">
       <option name="closed" value="true" />
@@ -172,11 +172,70 @@
       <option name="project" value="LOCAL" />
       <updated>1713300367591</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="11">
+      <option name="closed" value="true" />
+      <created>1713300541726</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713300541726</updated>
+    </task>
+    <task id="LOCAL-00009" summary="11">
+      <option name="closed" value="true" />
+      <created>1713300605790</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713300605790</updated>
+    </task>
+    <task id="LOCAL-00010" summary="14">
+      <option name="closed" value="true" />
+      <created>1713300679102</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713300679102</updated>
+    </task>
+    <task id="LOCAL-00011" summary="15">
+      <option name="closed" value="true" />
+      <created>1713300702568</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713300702568</updated>
+    </task>
+    <task id="LOCAL-00012" summary="16">
+      <option name="closed" value="true" />
+      <created>1713300739643</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713300739643</updated>
+    </task>
+    <task id="LOCAL-00013" summary="17">
+      <option name="closed" value="true" />
+      <created>1713333212114</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713333212114</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="3" />
@@ -186,6 +245,11 @@
     <MESSAGE value="7" />
     <MESSAGE value="8" />
     <MESSAGE value="9" />
-    <option name="LAST_COMMIT_MESSAGE" value="9" />
+    <MESSAGE value="11" />
+    <MESSAGE value="14" />
+    <MESSAGE value="15" />
+    <MESSAGE value="16" />
+    <MESSAGE value="17" />
+    <option name="LAST_COMMIT_MESSAGE" value="17" />
   </component>
 </project>
