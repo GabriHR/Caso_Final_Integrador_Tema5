@@ -1,5 +1,6 @@
 package Optimizacion_Procesos;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Mejora_Algoritmos {
@@ -32,6 +33,16 @@ public class Mejora_Algoritmos {
         swap(arr, storeIndex, high);
         printArrayWithDelay(arr);
         return storeIndex;
+    }
+
+    private void printArrayWithDelay(int[] arr) {
+        System.out.println(Arrays.toString(arr));
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // restore interrupted status
+            System.out.println("Thread was interrupted, Failed to complete operation");
+        }
     }
 
 }
