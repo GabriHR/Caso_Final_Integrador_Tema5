@@ -45,4 +45,23 @@ public class Mejora_Algoritmos {
         }
     }
 
+    private int medianOfThree(int[] arr, int low, int high) {
+        int mid = (low + high) / 2;
+        if (arr[low] > arr[mid]) {
+            swap(arr, low, mid);
+        }
+        if (arr[low] > arr[high]) {
+            swap(arr, low, high);
+        }
+        if (arr[mid] > arr[high]) {
+            swap(arr, mid, high);
+        }
+        return mid;
+    }
+
+    private void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }
